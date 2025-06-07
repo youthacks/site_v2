@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "astro": "^5.9.1"
+    "astro": "^5.9.1",
+    "gsap": "^3.13.0"
   }
 }
