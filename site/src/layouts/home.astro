@@ -2,11 +2,15 @@
 import Head from "../shared/head.astro"
 import Navbar from "../shared/navbar.astro"
 import Footer from "../shared/footer.astro"
+import Logo from "../shared/logo.astro";
 
 const { BannerText } = Astro.props;
+const { LogoType } = Astro.props;
 ---
 <Head />
 <body>
+    
+    <Logo type={LogoType}/>
     <div id="hero-banner">
         <h1 id="banner-test">{BannerText}</h1>
     </div>
@@ -16,5 +20,7 @@ const { BannerText } = Astro.props;
 </body>
 
 <style>
-
+    body {
+        margin: 0;
+    }
 </style>
