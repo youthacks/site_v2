@@ -6,13 +6,22 @@ import Logo from "../shared/logo.astro";
 
 const { BannerText } = Astro.props;
 const { LogoType } = Astro.props;
+
+const BannerSrc = "/banners/_DSC9591_edited.JPG";
 ---
 <Head />
 <body>
     
-    <Logo type={LogoType}/>
+    
     <div id="hero-banner">
-        <h1 id="banner-test">{BannerText}</h1>
+        
+        <Logo type={LogoType}/>
+        <img src={BannerSrc} id="banner-image">
+        <div id="text-wrapper">
+            <h1 id="banner-text">{BannerText}</h1>
+        </div>
+        
+        
     </div>
     <Navbar/>
     <slot />
@@ -22,5 +31,53 @@ const { LogoType } = Astro.props;
 <style>
     body {
         margin: 0;
+    }
+
+    #hero-banner {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+
+    #banner-image {
+        position:absolute;
+        height: inherit;
+        width: inherit;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    #text-wrapper {
+        height: inherit;
+        width: inherit;
+        
+
+    }
+
+    #banner-text {
+        padding: 2rem;
+
+        color: white;
+        font-family: "Atkinson Hyperlegible", sans-serif;
+        font-size: 6rem;
+        font-weight: 600;
+        font-style: normal;
+
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        width: 60vw;
+    }
+
+    @media only screen and (max-width: 1250px) {
+        #banner-text{
+            width: 60vw;
+            font-size: 4rem;
+        }
+
     }
 </style>

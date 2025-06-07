@@ -34,13 +34,14 @@ switch (type) {
     #logo {
 
         /* Anchor logo in top-left of website */
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         padding: 2rem;
 
         /* viewport <30vw triggers scalling down of logo */
         max-width: 30vw;
+        z-index: 2;
     }
 
     /* Reposition logo in centre of page for mobile layouts */
