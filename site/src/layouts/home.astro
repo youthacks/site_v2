@@ -1,7 +1,7 @@
 ---
-import Head from "../shared/head.astro"
-import Navbar from "../shared/navbar.astro"
-import Footer from "../shared/footer.astro"
+import Head from "../shared/head.astro";
+import Navbar from "../shared/navbar.astro";
+import Footer from "../shared/footer.astro";
 import Logo from "../shared/logo.astro";
 
 const { BannerText } = Astro.props;
@@ -9,75 +9,96 @@ const { LogoType } = Astro.props;
 
 const BannerSrc = "/banners/_DSC9591_edited.JPG";
 ---
+
 <Head />
 <body>
-    
-    
-    <div id="hero-banner">
-        
-        <Logo type={LogoType}/>
-        <img src={BannerSrc} id="banner-image">
-        <div id="text-wrapper">
-            <h1 id="banner-text">{BannerText}</h1>
-        </div>
-        
-        
+  <div id="hero-banner">
+    <Logo type={LogoType} />
+    <div class="gradiant"></div>
+    <img src={BannerSrc} id="banner-image" />
+    <div id="text-wrapper">
+      <h1 id="banner-text">{BannerText}</h1>
     </div>
-    <Navbar/>
-    <slot />
-    <Footer/>
+  </div>
+  <!--Hero banner is positioned absolutely, so spacer ensures content is placed below banner in proper flow -->
+  <div id="banner-spacer"></div>
+
+  <Navbar />
+  <slot />
+  <Footer />
 </body>
 
 <style>
-    body {
-        margin: 0;
-    }
+  body {
+    margin: 0;
+  }
 
-    #hero-banner {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-    }
+  #hero-banner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
 
-    #banner-image {
-        position:absolute;
-        height: inherit;
-        width: inherit;
-        object-fit: cover;
-        z-index: -1;
-    }
+  #banner-image {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    z-index: -1;
+  }
 
-    #text-wrapper {
-        height: inherit;
-        width: inherit;
-        
+  #text-wrapper {
+    height: inherit;
+    width: inherit;
+  }
 
-    }
+  #banner-text {
+    padding: 2rem;
 
+    color: white;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 6rem;
+    font-weight: 600;
+    font-style: normal;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    width: 60vw;
+  }
+
+  .gradiant {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    /*
+    background: linear-gradient(
+      290deg,
+      rgba(44, 61, 156, 0.5),
+      rgba(161, 236, 239, 0.3)
+    ); */
+
+    background: linear-gradient(
+      290deg,
+      rgba(241, 82, 38, 0.3),
+      rgba(26, 43, 119, 0.3)
+    );
+    /*url(/filters/noise2.svg);*/
+  }
+
+  @media only screen and (max-width: 1250px) {
     #banner-text {
-        padding: 2rem;
-
-        color: white;
-        font-family: "Atkinson Hyperlegible", sans-serif;
-        font-size: 6rem;
-        font-weight: 600;
-        font-style: normal;
-
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-
-        width: 60vw;
+      width: 60vw;
+      font-size: 4rem;
     }
+  }
 
-    @media only screen and (max-width: 1250px) {
-        #banner-text{
-            width: 60vw;
-            font-size: 4rem;
-        }
-
-    }
+  #banner-spacer {
+    height: 100vh;
+    width: 100vw;
+  }
 </style>
