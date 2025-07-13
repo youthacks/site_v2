@@ -4,6 +4,8 @@ import Navbar from "../shared/navbar.astro";
 import Footer from "../shared/footer.astro";
 import Logo from "../shared/logo.astro";
 
+import FloatingNavbar from "../components/navigation/floatingNavbar.astro";
+
 const { BannerText } = Astro.props;
 const { LogoType } = Astro.props;
 
@@ -12,6 +14,7 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
 
 <Head />
 <body>
+  <FloatingNavbar/>
   <div id="hero-banner">
     <Logo type={LogoType} />
     <div class="gradiant"></div>
@@ -23,6 +26,7 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
   <!--Hero banner is positioned absolutely, so spacer ensures content is placed below banner in proper flow -->
   <div id="banner-spacer"></div>
 
+  
   <Navbar />
   <slot />
   <Footer />

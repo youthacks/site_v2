@@ -1,5 +1,6 @@
 ---
 const {type} = Astro.props;
+const {link} = Astro.props;
 let logo_src;
 
 // Fetch path for logo based on prop
@@ -27,7 +28,7 @@ switch (type) {
 }
 ---
 <div id="logo">
-    <img src={logo_src} id="logo">
+    <a href="/"><img src={logo_src} id="logo"></a>
 </div>
 
 <style>

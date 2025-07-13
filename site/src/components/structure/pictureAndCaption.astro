@@ -1,0 +1,13 @@
+---
+const { image_src } = Astro.props
+---
+<div class="container">
+    <img src={image_src}>
+    <div class="caption"></div>
+</div>
+
+<style>
+    .caption{
+        position: absolute;
+    }
+</style>
