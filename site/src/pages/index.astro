@@ -1,10 +1,40 @@
 ---
 import Home from "../layouts/home.astro";
 import FloatingNavbar from "../components/navigation/floatingNavbar.astro";
+import PictureAndCaption from "../components/structure/pictureAndCaption.astro";
+import ImageDescription1 from "../components/structure/image_description_1.astro"
+import Button1 from "../components/navigation/button1.astro";
+const coolashack1 = "/images/_DSC9679(1).jpg"
+
 ---
 
 <html lang="en">
-  <Home BannerText="We run Hackathons for teens in the UK." LogoType="B+W" />
+  <Home BannerText="We run Hackathons for teens in the UK." LogoType="B+W">
+    
+    <ImageDescription1>
+      <div class="description">
+        <div class="text_wrapper">
+          <h1>
+            "We make hackathons and coding events a reality for teens across the UK, creating opportunities for teens to learn and grow together"
+          </h1>
+          <p>
+            Hackathons are social coding events, where people can get together,
+            make new friends, and work on amazing projects together no matter
+            their skill level. Our mission is to run these empowering events, helping teens build technical skills and confidence, and breaking down some of the barriers to accessing CS education.
+          </p>
+          <Button1 href="" text="Support Us" />
+        </div>
+      </div>
+      <div class="image">
+        <div class="image_container">
+          <img src={coolashack1} />
+          <p>Scrapyard Cambridge @ Raspberry Pi Foundation</p>
+        </div>
+      </div>
+  </ImageDescription1>
 
-  <style></style>
+  </Home>
+  <style>
+    
+  </style>
 </html>

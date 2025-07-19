@@ -1,12 +1,26 @@
 ---
 const { image_src } = Astro.props
+const { caption } = Astro.props
 ---
 <div class="container">
     <img src={image_src}>
-    <div class="caption"></div>
+    <div class="caption">
+        <p class="caption-text">{caption}</p>
+    </div>
 </div>
 
 <style>
+    .container {
+        max-width: inherit;
+        height: inherit;
+    }
+    .container img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
     .caption{
         position: absolute;
     }

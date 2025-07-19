@@ -1,0 +1,27 @@
+---
+const {text} = Astro.props
+const {href} = Astro.props
+---
+
+<div class="container">
+    <a href={href}>{text}</a>
+</div>
+
+<style>
+    .container{
+        border-radius: 10px;
+        border: 2px solid black;
+        margin-top: 2rem;
+        padding: 1rem;
+        width: fit-content;
+    }
+    a {
+        font-size: 1.2rem;
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+
+        text-decoration: none;
+        padding: 1rem
+    }
+</style>
