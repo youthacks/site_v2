@@ -8,20 +8,32 @@ const {href} = Astro.props
 </div>
 
 <style>
-    .container{
-        border-radius: 10px;
-        border: 2px solid black;
-        margin-top: 2rem;
-        padding: 1rem;
-        width: fit-content;
-    }
     a {
+
+        border-radius: 10px;
+        
+        margin-top: 3rem;
+        padding: 1rem;
+        width: 10vw;
+        text-align: center;
+        background-color: #2C3D9C;
+        display: block;
+
+
         font-size: 1.2rem;
-        color: black;
+        color: white;
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
 
         text-decoration: none;
         padding: 1rem
+    }
+
+    a:hover {
+        background-color: white;
+        color: #2C3D9C;
+        border: 3px solid #2C3D9C;
+        
+        transition: 0.3s;
     }
 </style>

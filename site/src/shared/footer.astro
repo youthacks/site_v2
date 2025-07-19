@@ -1,6 +1,6 @@
 ---
 import Logo from "./logo.astro"
-const logo_footer = "logos/youthacks_logo_black.svg"
+const logo_footer = "logos/youthacks_logo_colour.svg"
 ---
 
 
@@ -9,21 +9,23 @@ const logo_footer = "logos/youthacks_logo_black.svg"
     <div class="links-container">
         <div class="links">
             <h2>Site</h2>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
+            <a href="">Our Projects</a>
+            <a href="">About Us</a>
+            <a href="">Get in Touch</a>
+            <a href="">Donate</a>
+            <a href="">For Parents</a>
         </div>
         <div class="links">
             <h2>Social Media</h2>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
-            <a href="">Demo Link</a>
+            <a href="">Instagram</a>
+            <a href="">Tiktok</a>
+            <a href="">Linkedin</a>
+            <a href="">Facebook</a>
+            <a href="">GitHub</a>
         </div>
+    </div>
+    <div class="fineprint">
+        <p>© 2025 Youthacks. Registering for UK charity status. Fiscally sponsored by Hack Club, a 501(c)(3) nonprofit (EIN: 81-2908499). </p>
     </div>
 </div>
 
@@ -41,7 +43,7 @@ const logo_footer = "logos/youthacks_logo_black.svg"
         display: grid;
         width: 50vw;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 2rem;
+        padding-bottom: 1rem;
     }
     .links a {
         display: block;
@@ -82,9 +84,24 @@ const logo_footer = "logos/youthacks_logo_black.svg"
             margin-right: auto;
             width: 100vw;
         }
+        .links-container{
+            grid-template-columns: 1fr;
+        }
     }
 
     .logo img {
         max-height: 3rem;
+    }
+
+    .fineprint {
+        background-color: #f8fafc;
+        padding-bottom: 1rem;
+
+        font-family: "Atkinson Hyperlegible", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        font-size: 1rem;
+      }
     }
 </style>
