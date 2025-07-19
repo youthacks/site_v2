@@ -1,13 +1,90 @@
 ---
+import Logo from "./logo.astro"
+const logo_footer = "logos/youthacks_logo_black.svg"
 ---
-<div class="container">
 
+
+<div class="container">
+    <div class=logo><img src={logo_footer}/></div>
+    <div class="links-container">
+        <div class="links">
+            <h2>Site</h2>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+        </div>
+        <div class="links">
+            <h2>Social Media</h2>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+            <a href="">Demo Link</a>
+        </div>
+    </div>
 </div>
 
 <style>
+
     .container {
-        height: 40vh;
-        background-color: red;
-        
+        height: fit-content;
+        border-top: 1px solid #dce1e9;
+        background-color: #f8fafc;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+
+    .links-container {
+        display: grid;
+        width: 50vw;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+    }
+    .links a {
+        display: block;
+        width: fit-content;
+        margin-bottom: 1rem;
+
+        color: black;
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+
+        text-decoration: none;
+    
+    }
+
+    .links h2{
+        font-family: "Atkinson Hyperlegible", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .logo {
+
+        /* Anchor logo in top-left of website */
+        padding: 2rem;
+        padding-left: 0;
+
+        /* viewport <30vw triggers scalling down of logo */
+        max-width: 30vw;
+        z-index: 2;
+    }
+
+    /* Reposition logo in centre of page for mobile layouts */
+    @media only screen and (max-width: 900px) {
+        .logo {
+            
+            margin-left: auto;
+            margin-right: auto;
+            width: 100vw;
+        }
+    }
+
+    .logo img {
+        max-height: 3rem;
     }
 </style>
