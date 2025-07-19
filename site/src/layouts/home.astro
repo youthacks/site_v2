@@ -1,15 +1,19 @@
 ---
+
+//import { onMount } from 'astro';
 import Head from "../shared/head.astro";
 import Navbar from "../shared/navbar.astro";
 import Footer from "../shared/footer.astro";
 import Logo from "../shared/logo.astro";
-
 import FloatingNavbar from "../components/navigation/floatingNavbar.astro";
 
 const { BannerText } = Astro.props;
 const { LogoType } = Astro.props;
 
 const BannerSrc = "/banners/_DSC9591_edited.JPG";
+
+// Animation with gsap
+
 ---
 
 <Head />
@@ -31,6 +35,46 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
   <slot />
   <Footer />
 </body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"/>
+<script>
+
+  // Animation magic
+  import { gsap } from "gsap";
+  console.log("using GSAP: ", gsap.version);
+
+  gsap.registerPlugin(ScrambleTextPlugin) 
+
+  /*gsap.to("#banner-text", {
+    duration: 3, 
+    scrambleText: "We run Hackathons for teens in the UK."
+  });*/
+
+
+  const tl = gsap.timeline({
+    id: "#banner-text",
+    defaults: { ease: "circ.out" }
+  });
+  console.log(tl)
+
+  gsap.set("#banner-text", {
+    opacity: 1,
+  })
+
+  tl.to("#banner-text", {
+    scrambleText: {
+      text: "We run Hackathons for teens in the UK",
+      chars: "01",
+      tweenLength: true,
+      revealDelay: 0.5,
+      speed: 1.2,
+      delimiter: "",
+    },
+    duration: 8
+  })
+
+
+</script>
 
 <style>
   body {
