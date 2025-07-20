@@ -18,11 +18,17 @@ const bento7 = "/images/P1240546.JPG"
 const bento8 = "/images/1000037180_cropped.png"
 
 const bannerimg1 = "/images/IMG_4142.JPG"
+const bannerimg2 = "/images/_DSC9708(3).jpg"
+const bannerimg3 = "/images/coolashackbg.png"
+const coolashacklogo = "images/coolashack-logo.png"
 import Button2 from "../components/navigation/button2.astro"
 
 import Card from "../components/structure/card.astro";
 import Card2 from "../components/structure/card2.astro"
 import Card3 from "../components/structure/card3.astro"
+import Card4 from "../components/structure/card4.astro"
+import Card5 from "../components/structure/card5.astro"
+
 import BentoGrid from "../components/structure/bentoGrid.astro";
 import LongCardGrid from "../components/structure/longCardGrid.astro";
 
@@ -102,9 +108,37 @@ import LongCardGrid from "../components/structure/longCardGrid.astro";
     </Card2>
   </BentoGrid>
 
+  <Card4>
+    <img src={bannerimg2}>
+    <div class="filter"/>
+    <div class="content">
+      <div>
+        <h1>Interested in sponsoring?</h1>
+        <p>Our events are always free to attend, and so we are always on the lookout for companies who share our beliefs in investing in the next generation of makers to work with us! Take a look at our sponsorship prospectus to find out more about how we can work with you.</p>
+      </div>
+      <div class="button-container">
+        <Button2 href="" text="Learn More >"/>
+      </div>
+    </div>
+  </Card4>
 
-
-
+  <Card5>
+    <img src={bannerimg3}/>
+    <div class="filter"/>
+    <div class="content">
+      
+      <div>
+        <img class="logo" src={coolashacklogo}>
+      </div>
+      
+      <div class="content-container">
+        <h1>Launched 24th May 2025</h1>
+        <p>50 attendees, 10 high quality projects, £6500+ of swag. Our first event where we had complete creative control, supported by the Raspberry Pi Foundation, Yubico, Learn Anything, and Aromi</p>
+        <Button2 href="" text="Learn More >"/>
+      </div>
+      
+    </div>
+  </Card5>
 
   </Home>
   <style>

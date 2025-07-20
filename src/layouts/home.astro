@@ -2,10 +2,10 @@
 
 //import { onMount } from 'astro';
 import Head from "../shared/head.astro";
-import Navbar from "../shared/navbar.astro";
+
 import Footer from "../shared/footer.astro";
 import Logo from "../shared/logo.astro";
-import FloatingNavbar from "../components/navigation/floatingNavbar.astro";
+import Navbar from "../shared/navbar.astro";
 
 const { BannerText } = Astro.props;
 const { LogoType } = Astro.props;
@@ -20,7 +20,7 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
 <body>
 
   
-  <FloatingNavbar/>
+  <Navbar/>
   <div id="hero-banner">
     <Logo type={LogoType} />
     <div class="gradiant"></div>
