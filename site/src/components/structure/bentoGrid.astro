@@ -1,0 +1,70 @@
+---
+---
+<div class="container">
+    <slot />
+</div>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: [first] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5] 1fr [end];
+        grid-template-rows: [top] 1fr [r2] 1fr [r3] 1fr [r4] 1fr [bottom];
+        height: 100vh;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+    }
+
+    .container :global(.grid1) {
+        grid-column-start: first;
+        grid-column-end: c4;
+        grid-row-start: top;
+        grid-row-end: r3;
+    }
+    .container :global(.grid2) {
+        grid-column-start: c4;
+        grid-column-end: end;
+        grid-row-start: top;
+        grid-row-end: r2;
+    }
+    .container :global(.grid3) {
+        grid-column-start: first;
+        grid-column-end: c2;
+        grid-row-start: r3;
+        grid-row-end: end;
+    }
+    .container :global(.grid4) {
+        grid-column-start: c2;
+        grid-column-end: c3;
+        grid-row-start: r3;
+        grid-row-end: r4;
+    }
+    .container :global(.grid5) {
+        grid-column-start: c3;
+        grid-column-end: c4;
+        grid-row-start: r3;
+        grid-row-end: r4;
+    }
+    .container :global(.grid6) {
+        grid-column-start: c2;
+        grid-column-end: c4;
+        grid-row-start: r4;
+        grid-row-end: end;
+    }
+    .container :global(.grid7) {
+        grid-column-start: c4;
+        grid-column-end: end;
+        grid-row-start: r2;
+        grid-row-end: r4;
+    }
+    .container :global(.grid8) {
+        grid-column-start: c4;
+        grid-column-end: end;
+        grid-row-start: r4;
+        grid-row-end: end;
+    }
+    
+    
+
+</style>

@@ -1,0 +1,28 @@
+---
+const { class: className } = Astro.props;
+---
+<div class:list={["container", className]}>
+    <slot/>
+</div>
+
+<style>
+    .container{
+        border-radius: 50px;
+        background-colour: #e0e0e0;
+        box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+        width: auto;
+        height: auto;
+        margin: 2rem;
+    }
+
+    .container :global(h1){
+
+    }
+    .container :global(h2){
+
+    }
+    .container :global(p){
+
+    }
+</style>

@@ -6,6 +6,21 @@ import ImageDescription1 from "../components/structure/image_description_1.astro
 import Button1 from "../components/navigation/button1.astro";
 const coolashack1 = "/images/_DSC9679(1).jpg"
 
+const testimg = "/images/_DSC9598.JPG"
+
+const bento1 = "/images/_DSC9724(2).JPG"
+const bento2 = "/images/_DSC9708(3).jpg"
+const bento3 = "/images/20250622_164327.jpg"
+const bento4 = "/images/1000041630.jpg"
+const bento5 = "/images/20250315_161919.jpg"
+const bento6 = "/images/counterspell_cropped.png"
+const bento7 = "/images/P1240546.JPG"
+const bento8 = "/images/1000037180_cropped.png"
+
+import Card from "../components/structure/card.astro";
+import Card2 from "../components/structure/card2.astro"
+import BentoGrid from "../components/structure/bentoGrid.astro";
+
 ---
 
 <html lang="en">
@@ -13,17 +28,21 @@ const coolashack1 = "/images/_DSC9679(1).jpg"
     
     <ImageDescription1>
       <div class="description">
-        <div class="text_wrapper">
-          <h1>
-            "We organise hackathons for teens across the UK, creating opportunities to make awesome projects, while learning and growing together"
-          </h1>
-          <p>
-            Hackathons are social coding events, where people can get together,
-            make new friends, and work on amazing projects together no matter
-            their skill level. Our mission is to run these empowering events, helping teens build technical skills and confidence, and break down some of the barriers to accessing CS education.
-          </p>
-          <Button1 href="" text="Support Us" />
-        </div>
+
+        
+          <div class="text_wrapper">
+            <h1>
+              "We organise hackathons for teens across the UK, creating opportunities to make awesome projects, while learning and growing together"
+            </h1>
+            <p>
+              Hackathons are social coding events, where people can get together,
+              make new friends, and work on amazing projects together no matter
+              their skill level. Our mission is to run these empowering events, helping teens build technical skills and confidence, and break down some of the barriers to accessing CS education.
+            </p>
+            <Button1 href="" text="Support Us" />
+          </div>
+        
+
       </div>
       <div class="image">
         <div class="image_container">
@@ -32,6 +51,38 @@ const coolashack1 = "/images/_DSC9679(1).jpg"
         </div>
       </div>
   </ImageDescription1>
+  
+    <BentoGrid>
+      <Card2 class="grid1">
+        <img src={bento1}>
+      </Card2>
+      <Card2 class="grid2">
+        <img src={bento2}>
+      </Card2>
+      <Card2 class="grid3">
+        <img src={bento3}>
+      </Card2>
+      <Card2 class="grid4">
+        <img src={bento4}>
+      </Card2>
+      <Card2 class="grid5">
+        <img src={bento5}>
+      </Card2>
+      <Card2 class="grid6">
+        <img src={bento6}>
+      </Card2>
+      <Card2 class="grid7">
+        <img src={bento7}>
+      </Card2>
+      <Card2 class="grid8">
+        <img src={bento8}>
+      </Card2>
+      
+    </BentoGrid>
+
+
+
+
 
   </Home>
   <style>

@@ -18,6 +18,8 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
 
 <Head />
 <body>
+
+  
   <FloatingNavbar/>
   <div id="hero-banner">
     <Logo type={LogoType} />
@@ -45,21 +47,11 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
 
   gsap.registerPlugin(ScrambleTextPlugin) 
 
-  /*gsap.to("#banner-text", {
-    duration: 3, 
-    scrambleText: "We run Hackathons for teens in the UK."
-  });*/
-
-
   const tl = gsap.timeline({
     id: "#banner-text",
     defaults: { ease: "circ.out" }
   });
   console.log(tl)
-
-  gsap.set("#banner-text", {
-    opacity: 1,
-  })
 
   tl.to("#banner-text", {
     scrambleText: {
@@ -72,7 +64,6 @@ const BannerSrc = "/banners/_DSC9591_edited.JPG";
     },
     duration: 8
   })
-
 
 </script>
 
