@@ -110,4 +110,17 @@ const { class: className } = Astro.props;
     .container :global(.button-container .container a) {
         margin-top: 0;
     }
+
+    @media only screen and (max-width: 1200px) {
+        .container{
+            height: 60vh;
+            width: 80vw;
+        }
+        
+        .container :global(.content) {
+            height: fit-content;
+            grid-template-columns: 1fr;
+        }
+    }
+
 </style>
