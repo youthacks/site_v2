@@ -17,9 +17,14 @@ const bento6 = "/images/counterspell_cropped.png"
 const bento7 = "/images/P1240546.JPG"
 const bento8 = "/images/1000037180_cropped.png"
 
+const bannerimg1 = "/images/IMG_4142.JPG"
+import Button2 from "../components/navigation/button2.astro"
+
 import Card from "../components/structure/card.astro";
 import Card2 from "../components/structure/card2.astro"
+import Card3 from "../components/structure/card3.astro"
 import BentoGrid from "../components/structure/bentoGrid.astro";
+import LongCardGrid from "../components/structure/longCardGrid.astro";
 
 ---
 
@@ -51,34 +56,51 @@ import BentoGrid from "../components/structure/bentoGrid.astro";
         </div>
       </div>
   </ImageDescription1>
+
   
-    <BentoGrid>
-      <Card2 class="grid1">
-        <img src={bento1}>
-      </Card2>
-      <Card2 class="grid2">
-        <img src={bento2}>
-      </Card2>
-      <Card2 class="grid3">
-        <img src={bento3}>
-      </Card2>
-      <Card2 class="grid4">
-        <img src={bento4}>
-      </Card2>
-      <Card2 class="grid5">
-        <img src={bento5}>
-      </Card2>
-      <Card2 class="grid6">
-        <img src={bento6}>
-      </Card2>
-      <Card2 class="grid7">
-        <img src={bento7}>
-      </Card2>
-      <Card2 class="grid8">
-        <img src={bento8}>
-      </Card2>
-      
-    </BentoGrid>
+  
+  <Card3>
+    <img src={bannerimg1}>
+    <div class="filter"/>
+    <div class="content">
+      <div>
+        <h1>Volunteer with Youthacks!</h1>
+        <p>We're looking for passionate volunteers to help with our next events! Are you over 18, able to pass an enhanced DBS check, and available on the 27th-28th September? If so, we would love to hear from you! Bonus points if you have experience with coding or CS education!</p>
+      </div>
+      <div class="button-container">
+        <Button2 href="" text="Register your interest >"/>
+      </div>
+    </div>
+  </Card3>
+
+  
+  
+  <BentoGrid>
+    <Card2 class="grid1">
+      <img src={bento1}>
+    </Card2>
+    <Card2 class="grid2">
+      <img src={bento2}>
+    </Card2>
+    <Card2 class="grid3">
+      <img src={bento3}>
+    </Card2>
+    <Card2 class="grid4">
+      <img src={bento4}>
+    </Card2>
+    <Card2 class="grid5">
+      <img src={bento5}>
+    </Card2>
+    <Card2 class="grid6">
+      <img src={bento6}>
+    </Card2>
+    <Card2 class="grid7">
+      <img src={bento7}>
+    </Card2>
+    <Card2 class="grid8">
+      <img src={bento8}>
+    </Card2>
+  </BentoGrid>
 
 
 

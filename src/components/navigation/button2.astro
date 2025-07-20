@@ -1,0 +1,45 @@
+---
+const {text} = Astro.props
+const {href} = Astro.props
+---
+
+<div class="container">
+    <a href={href}>{text}</a>
+</div>
+
+<style>
+    a {
+
+        border-radius: 10px;
+        
+        margin-top: 3rem;
+        padding: 1rem;
+        width: 15vw;
+        text-align: center;
+        background-color: white;
+        display: block;
+
+
+        font-size: 1.2rem;
+        color: #2C3D9C;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+
+        text-decoration: none;
+        padding: 1rem
+    }
+
+    a:hover {
+        background-color: #2C3D9C;
+        color: white;
+        border: 3px solid white;
+        
+        transition: 0.3s;
+    }
+
+     @media only screen and (max-width: 900px) {
+        a {
+            width: fit-content;
+        }
+     }
+</style>
